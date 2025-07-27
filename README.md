@@ -88,10 +88,9 @@ Contributions are welcome! Feel free to open issues or pull requests for:
     Anything else cool you dream up!
 
   ---
-
-# Disclaimer
-
-Use OnionEye responsibly and legally. Do NOT scan or scrape sites without permission. The author is not responsible for any misuse.
+> [!IMPORTANT]
+> # Disclaimer
+> Use OnionEye responsibly and legally. Do NOT scan or scrape sites without permission. The author is not responsible for any misuse.
 
 ---
 
