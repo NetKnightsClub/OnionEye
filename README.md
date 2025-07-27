@@ -57,11 +57,25 @@ Update your seeds.json with your desired starting URLs.
 
 # Usage
 
-Run the crawler with ```./startscript.sh```
+To start scanning with OnionEye, run the provided setup script:
+
+```./startscript.sh```
+This script automates the following tasks:
+
+    Detects your operating system and installs the Tor client if it is not already installed.
+
+    Ensures the Tor service is enabled and running.
+
+    Checks for the presence of the Tor Browser and prompts you to install it if missing.
+
+    Creates and activates a Python virtual environment (venv) to isolate dependencies.
+
+    Installs all required Python packages as specified in requirements.txt.
+
+    Finally, launches the OnionEye crawler.
+
 > [!NOTE]
 > You may have to `chmod u+x startscript.sh` first
-
-You’ll see the scan progress in your terminal with info about discovered links and whether they require JavaScript.
 
 ---
 
@@ -83,15 +97,15 @@ OnionEye/
 # Contributing
 Contributions are welcome! Feel free to open issues or pull requests for:
 
-More efficient crawling
+    More efficient crawling
 
- Better JS detection
+    Better JS detection
 
- Web UI integration
+    Web UI integration
 
- Exporting scan results
+    Exporting scan results
 
-Anything else cool you dream up!
+    Anything else cool you dream up!
 
 >[!IMPORTANT]
 > # Disclaimer
