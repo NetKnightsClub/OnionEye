@@ -1,1 +1,3 @@
-stub
+requests
+beautifulsoup4
+urllib3[socks]
