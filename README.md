@@ -8,6 +8,15 @@
 
 OnionEye is a lightweight Python tool designed to skim and crawl the Tor network and regular websites, hunting down .onion and regular HTTP/HTTPS links. It’s built for cybersecurity enthusiasts, researchers, and curious minds who want to explore and analyze hidden services through the Tor proxy — all without the usual bloated overhead.
 
+> [!WARNING]
+> OnionEye fetches and scans URLs *without* executing any JavaScript, which helps keep you safer. However, some .onion sites may host malicious content.  
+> **Always keep JavaScript disabled in your Tor Browser when visiting unknown or scanned links!**  
+> Enabling JS on Tor can expose you to malware, tracking, and other attacks.
+
+> [!CAUTION]
+> OnionEye does not filter or block dangerous content. It is intended for research and analysis only.  
+> Visiting scanned links *outside* of Tor or with unsafe settings may expose your system to risks.
+
 ---
 
 ## Features
@@ -36,29 +45,27 @@ OnionEye is a lightweight Python tool designed to skim and crawl the Tor network
 
 ```pip install requests beautifulsoup4```
 
-    Make sure you have Tor installed and running. On most systems:
-    
+Make sure you have Tor installed and running. On most systems:
+
 ```sudo systemctl start tor```
 
 or launch the Tor Browser which provides the SOCKS proxy.
 
-    Update your seeds.json with your desired starting URLs.
+Update your seeds.json with your desired starting URLs.
 
 ---
 
 # Usage
 
-Run the crawler with:
-
-```./startscript.sh```
+Run the crawler with ```./startscript.sh```
 > [!NOTE]
-> You may have to `chmod u+x startscript.sh` first
+> You may have to chmod u+x startscript.sh first
 
 You’ll see the scan progress in your terminal with info about discovered links and whether they require JavaScript.
 
 ---
 
-# Project Structure
+# Project Structure 
 
 ```
 OnionEye/
@@ -71,34 +78,31 @@ OnionEye/
 ├── run.py               # CLI entry point to launch scan
 ├── README.md            # This file
 ```
-
 ---
 
 # Contributing
-
 Contributions are welcome! Feel free to open issues or pull requests for:
 
-    More efficient crawling
+More efficient crawling
 
-    Better JS detection
+ Better JS detection
 
-    Web UI integration
+ Web UI integration
 
-    Exporting scan results
+ Exporting scan results
 
-    Anything else cool you dream up!
+Anything else cool you dream up!
 
-  ---
-> [!IMPORTANT]
+>[!IMPORTANT]
 > # Disclaimer
-> Use OnionEye responsibly and legally. Do NOT scan or scrape sites without permission. The author is not responsible for any misuse.
+> Use OnionEye responsibly and legally. Do NOT scan or scrape sites without permission. The author(s) is not responsible for any misuse.
 
 ---
 
 # License
 
-```MIT License — See LICENSE for details.```
+`MIT License — See LICENSE for details.`
 
 Made with ❤️ by DrKel and the NetKnights Cybersecurity Club
 
-Ready to get your eye on the onions? 🧅👁️
+> Ready to get your eye on the onions? 🧅👁️
