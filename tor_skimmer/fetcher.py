@@ -1,19 +1,17 @@
 import requests
 
-TOR_PROXY = 'socks5h://127.0.0.1:9050'
-
-def get_page(url, user_agent="DrKelBot/1.0", timeout=10):
-    headers = {'User-Agent': user_agent}
-    proxies = {'http': TOR_PROXY, 'https': TOR_PROXY}
+def get_page(url):
     try:
-        resp = requests.get(url, headers=headers, proxies=proxies, timeout=timeout)
-        if resp.status_code == 200:
-            return resp.text
-        else:
-            print(f"Non-200 status code {resp.status_code} for {url}")
-            return None
-    except Exception as e:
-        print(f"Error fetching {url}: {e}")
-        return None
+        response = requests.get(
+            url,
+            timeout=10,
+            proxies={"http": "socks5h://127.0.0.1:9050", "https": "socks5h://127.0.0.1:9050"}
+        )
+        if response.status_code != 200:
+            return None, f"Status Code {response.status_code}"
+        return response.text, None
+    except requests.exceptions.RequestException as e:
+        return None, str(e)
+
 
 # hehe im a comment!
