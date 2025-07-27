@@ -50,7 +50,8 @@ or launch the Tor Browser which provides the SOCKS proxy.
 
 Run the crawler with:
 
-```python run.py```
+```./startscript.sh```
+(You may have to `chmod u+x startscript.sh` first)
 
 You’ll see the scan progress in your terminal with info about discovered links and whether they require JavaScript.
 
