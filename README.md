@@ -59,7 +59,7 @@ Update your seeds.json with your desired starting URLs.
 
 Run the crawler with ```./startscript.sh```
 > [!NOTE]
-> You may have to chmod u+x startscript.sh first
+> You may have to `chmod u+x startscript.sh` first
 
 You’ll see the scan progress in your terminal with info about discovered links and whether they require JavaScript.
 
